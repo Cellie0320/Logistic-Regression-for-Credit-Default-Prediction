@@ -13,15 +13,22 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Cache Pandoc
+      uses: actions/cache@v2
+      with:
+        path: /usr/local/bin/pandoc
+        key: ${{ runner.os }}-pandoc
+
+    - name: Install Pandoc
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-
-    - name: Install Pandoc
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y pandoc
 
     - name: Install dependencies
       run: |
@@ -30,7 +37,7 @@ jobs:
 
     - name: Convert YAML to PDF
       run: |
-        python -c "import pypandoc; pypandoc.convert_file('path/to/main.yml', 'pdf', outputfile='credit_card_prediction_model.pdf', extra_args=['--metadata=title=\"Credit Card Prediction Model\"', '--metadata=author=\"Your Name\"', '--metadata=date=\"2024-07-26\"', '-V', 'geometry:margin=1in'])"
+        python -c "import pypandoc; pypandoc.convert_file('main.yml', 'pdf', outputfile='credit_card_prediction_model.pdf', extra_args=['--metadata=title=\"Credit Card Prediction Model\"', '--metadata=author=\"Your Name\"', '--metadata=date=\"2024-07-26\"', '-V', 'geometry:margin=1in'])"
 
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v2
