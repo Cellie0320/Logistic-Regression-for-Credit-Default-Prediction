@@ -1,13 +1,12 @@
-name: CI
+name: Convert YAML to PDF
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  build:
+  convert:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,11 +18,22 @@ jobs:
       with:
         python-version: '3.x'
 
+    - name: Install Pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install pypandoc
 
-    - name: Run tests
+    - name: Convert YAML to PDF
       run: |
-        pytest
+        python -c "import pypandoc; pypandoc.convert_file('main.yml', 'pdf', outputfile='credit_card_prediction_model.pdf', extra_args=['--metadata=title=\"Credit Card Prediction Model\"', '--metadata=author=\"Your Name\"', '--metadata=date=\"2024-07-26\"', '-V', 'geometry:margin=1in'])"
+
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: yaml-pdf
+        path: credit_card_prediction_model.pdf
