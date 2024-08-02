@@ -1,4 +1,4 @@
-1. Project Overview
+no1. Project Overview
 
 Title: Logistic Regression for Credit Default Prediction
 Author: Marcel De Lange
@@ -106,4 +106,5 @@ For questions or further information, please contact:
 Email: [marceldelange20@gmail.com]
 
 10. License
-This project is licensed under the [Marcel De Lange] License - see the LICENSE file for details.
+This project is licensed under
+Marcel De Lange
