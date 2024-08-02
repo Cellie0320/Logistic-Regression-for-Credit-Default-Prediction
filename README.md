@@ -108,6 +108,4 @@ For questions or further information, please contact:
 
 **Email:** [marceldelange20@gmail.com]
 
-## License
 
-This project is licensed under [MIT License](LICENSE).
