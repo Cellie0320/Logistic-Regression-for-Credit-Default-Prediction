@@ -1,110 +1,115 @@
-no1. Project Overview
+# Logistic Regression for Credit Default Prediction
 
-Title: Logistic Regression for Credit Default Prediction
-Author: Marcel De Lange
-Student ID: 577610
-Date: 26-July-2024 - 28 July 2024
+**Author:** Marcel De Lange  
+**Student ID:** 577610  
+**Date:** 26-July-2024 - 28 July 2024
 
-Description:
-This project uses Logistic Regression to predict whether a credit card holder is likely to default on their payments. 
-The analysis involves data preprocessing, exploratory data analysis (EDA), feature scaling, 
-model training, and evaluation.
+## Project Overview
 
-2. Dataset
+This project uses Logistic Regression to predict whether a credit card holder is likely to default on their payments. The analysis involves data preprocessing, exploratory data analysis (EDA), feature scaling, model training, and evaluation.
 
-Source:
-The dataset is obtained from the UCI Machine Learning Repository: Credit Card Default Dataset
+## Dataset
 
-Features:
+**Source:**  
+The dataset is obtained from the [UCI Machine Learning Repository: Credit Card Default Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients).
 
-LIMIT: Amount of credit (in dollars)
-SEX: Gender of the credit card holder (1 = male, 2 = female)
-EDUCATION: Educational level (1 = graduate school, 2 = university, 3 = high school, 4 = other)
-MARRIAGE: Marital status (1 = married, 2 = single, 3 = others)
-AGE: Age of the credit card holder (in years)
-PAY_0 to PAY_6: History of past payment (range: -1 to 9)
-BILL_AMT1 to BILL_AMT6: Bill statement amount for the past 6 months
-PAY_AMT1 to PAY_AMT6: Amount of previous payments for the past 6 months
-default_payment_next_month: Target variable (1 = default, 0 = no default)
-3. Requirements
+**Features:**
+- `LIMIT`: Amount of credit (in dollars)
+- `SEX`: Gender of the credit card holder (1 = male, 2 = female)
+- `EDUCATION`: Educational level (1 = graduate school, 2 = university, 3 = high school, 4 = other)
+- `MARRIAGE`: Marital status (1 = married, 2 = single, 3 = others)
+- `AGE`: Age of the credit card holder (in years)
+- `PAY_0` to `PAY_6`: History of past payment (range: -1 to 9)
+- `BILL_AMT1` to `BILL_AMT6`: Bill statement amount for the past 6 months
+- `PAY_AMT1` to `PAY_AMT6`: Amount of previous payments for the past 6 months
+- `default_payment_next_month`: Target variable (1 = default, 0 = no default)
 
-Python Version: 3.x
-Libraries:
-pandas
-matplotlib
-seaborn
-scikit-learn
-4. Setup Instructions( only follow setup instructions if needed)
+## Requirements
 
-Clone the Repository :
+- **Python Version:** 3.x
+- **Libraries:**
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
 
-bash
-Copy code
-git clone <repository_url>
-Navigate to the Project Directory:
+## Setup Instructions
 
-bash
-Copy code
-cd <project_directory>
-Install Required Libraries:
+1. **Clone the Repository:**
 
-bash
-Copy code
-pip install pandas matplotlib seaborn scikit-learn
+    ```bash
+    git clone <repository_url>
+    ```
 
-5. How to Run the Code
-Download the Dataset:
+2. **Navigate to the Project Directory:**
 
-Place the dataset file (creditcard.ipynb (df).csv) in the project directory.
-Execute the Script ( notebook in this case):
+    ```bash
+    cd <project_directory>
+    ```
 
-Run the Python script(notebook in this case) to perform the analysis:
-bash
-Copy code
-python <script_name>.py
+3. **Install Required Libraries:**
 
-6. Analysis Details
-Exploratory Data Analysis (EDA):
+    ```bash
+    pip install pandas matplotlib seaborn scikit-learn
+    ```
 
-Box plots to visualize feature distributions.
-Histograms to show the distribution of features.
-Correlation heatmap to identify feature relationships.
-Feature Scaling:
+## How to Run the Code
 
-The AGE feature is scaled using StandardScaler.
-Model Training and Evaluation:
+1. **Download the Dataset:**
 
-Logistic Regression is used to predict default status.
-Evaluation metrics include accuracy scores and ROC curves.
-Prediction:
+   Place the dataset file (`creditcard.ipynb (df).csv`) in the project directory.
 
-Example of predicting default status for a specific case.
+2. **Execute the Script (Notebook in this case):**
 
-7. Visuals
+   Run the Python script (notebook in this case) to perform the analysis:
+
+    ```bash
+    python <script_name>.py
+    ```
+
+## Analysis Details
+
+**Exploratory Data Analysis (EDA):**
+- Box plots to visualize feature distributions.
+- Histograms to show the distribution of features.
+- Correlation heatmap to identify feature relationships.
+
+**Feature Scaling:**
+- The `AGE` feature is scaled using `StandardScaler`.
+
+**Model Training and Evaluation:**
+- Logistic Regression is used to predict default status.
+- Evaluation metrics include accuracy scores and ROC curves.
+
+**Prediction:**
+- Example of predicting default status for a specific case.
+
+## Visuals
+
 The following visuals are included in the project:
+- Box Plots
+- Scaled AGE Box Plot
+- Histograms
+- Correlation Matrix Heatmap
+- Training and Testing Data Evaluation Scatter Plots
+- ROC Curves
 
-Box Plots
-Scaled AGE Box Plot
-Histograms
-Correlation Matrix Heatmap
-Training and Testing Data Evaluation Scatter Plots
-ROC Curves
-Note: Visuals are saved as PNG files in the project directory.
+*Note: Visuals are saved as PNG files in the project directory.*
 
-8. Results
+## Results
 
-Training Accuracy: [0.778125]
+- **Training Accuracy:** 0.778125
+- **Testing Accuracy:** 0.7811666666666667
 
-Testing Accuracy: [0.7811666666666667]
+**Example Prediction:**
+- For a specific customer, the prediction is: [Predicted Default Status]
 
-Example Prediction:
+## Contact
 
-For a specific customer, the prediction is: [Predicted Default Status]
-9. Contact
 For questions or further information, please contact:
 
-Email: [marceldelange20@gmail.com]
+**Email:** [marceldelange20@gmail.com]
 
-10. License
-This project is licensed under
-Marcel De Lange
+## License
+
+This project is licensed under [MIT License](LICENSE).
