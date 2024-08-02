@@ -94,8 +94,6 @@ The following visuals are included in the project (pyhton notebook):
 - Training and Testing Data Evaluation Scatter Plots
 - ROC Curves
 
-*Note: Visuals are saved as PNG files in the project directory.*
-
 ## Results
 
 - **Training Accuracy:** 0.778125
