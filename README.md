@@ -2,7 +2,7 @@
 
 **Author:** Marcel De Lange  
 **Student ID:** 577610  
-**Date:** 26-July-2024 - 28 July 2024
+**Date:** June 2024-July 2024
 
 ## Project Overview
 
