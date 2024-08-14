@@ -109,3 +109,8 @@ For questions or further information, please contact:
 **Email:** [marceldelange20@gmail.com]
 
 
+## License
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
+
+Copyright [2024] [Marcel De Lange]. 
+
