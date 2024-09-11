@@ -1,19 +1,9 @@
-# Logistic Regression for Credit Default Prediction
+# Credit Card Default Prediction
 
-**Author:** Marcel De Lange  
-**Student ID:** 577610  
-**Date:** June 2024-July 2024
+This project aims to predict whether a credit card holder will default on their payment next month using various features related to their credit history and personal information.
 
-## Project Overview
+## Features:  
 
-This project uses Logistic Regression to predict whether a credit card holder is likely to default on their payments. The analysis involves data preprocessing, exploratory data analysis (EDA), feature scaling, model training, and evaluation.
-
-## Dataset
-
-**Source:**  
-The dataset is obtained from the [UCI Machine Learning Repository: Credit Card Default Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients).
-
-**Features:**
 - `LIMIT`: Amount of credit (in dollars)
 - `SEX`: Gender of the credit card holder (1 = male, 2 = female)
 - `EDUCATION`: Educational level (1 = graduate school, 2 = university, 3 = high school, 4 = other)
@@ -47,70 +37,26 @@ The dataset is obtained from the [UCI Machine Learning Repository: Credit Card D
     cd <project_directory>
     ```
 
-3. **Install Required Libraries:**
+3. **Install the Required Libraries:**
 
     ```bash
-    pip install pandas matplotlib seaborn scikit-learn
+    pip install -r requirements.txt
     ```
 
-## How to Run the Code
-
-1. **Download the Dataset:**
-
-   Place the dataset file (`creditcard.ipynb (df).csv`) in the project directory.
-
-2. **Execute the Script (Notebook in this case):**
-
-   Run the Python script (notebook in this case) to perform the analysis:
+4. **Run the Jupyter Notebook:**
 
     ```bash
-    python <script_name>.py
+    jupyter notebook
     ```
 
-## Analysis Details
+## Usage
 
-**Exploratory Data Analysis (EDA):**
-- Box plots to visualize feature distributions.
-- Histograms to show the distribution of features.
-- Correlation heatmap to identify feature relationships.
+Open the Jupyter Notebook and follow the instructions to load the data, preprocess it, and train the model. The notebook includes sections for exploratory data analysis, feature engineering, model training, and evaluation.
 
-**Feature Scaling:**
-- The `AGE` feature is scaled using `StandardScaler`.
+## Contributing
 
-**Model Training and Evaluation:**
-- Logistic Regression is used to predict default status.
-- Evaluation metrics include accuracy scores and ROC curves.
-
-**Prediction:**
-- Example of predicting default status for a specific case.
-
-## Visuals
-
-The following visuals are included in the project (pyhton notebook):
-- Box Plots
-- Scaled AGE Box Plot
-- Histograms
-- Correlation Matrix Heatmap
-- Training and Testing Data Evaluation Scatter Plots
-- ROC Curves
-
-## Results
-
-- **Training Accuracy:** 0.778125
-- **Testing Accuracy:** 0.7811666666666667
-
-**Example Prediction:**
-- For a specific customer, the prediction is: [Predicted Default Status]
-
-## Contact
-
-For questions or further information, please contact:
-
-**Email:** [marceldelange20@gmail.com]
-
+Feel free to submit issues or pull requests if you have any suggestions or improvements.
 
 ## License
-This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
 
-Copyright [2024] [Marcel De Lange]. 
-
+This project is licensed under the Apache License 2.0
